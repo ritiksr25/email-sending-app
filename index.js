@@ -42,4 +42,10 @@ app.use('/admin', require('./routes/admin'));
 app.use('/mails', require('./routes/mails'));
 
 const PORT = process.env.PORT;
-app.listen(PORT, ()=> console.log(`Server is up and running on Port ${PORT}`));
+app.listen(PORT, (err)=>{
+    if(err){
+        console.log(`Error in running Server: ${err}`);
+    } else{
+        console.log(`Server is up and running on Port ${PORT}`);
+    }});
+        

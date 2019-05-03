@@ -6,17 +6,15 @@ const adminController = require('../controllers/admin_controller');
 
 //admin dashboard route
 router.get('/', adminController.index);
-//admin view users route
+//users management
 router.get('/users', adminController.users);
+router.post('/users/status/:id', adminController.userStatus);
+//User message management
+router.get('/messages', adminController.messages);
+router.post('/messages/:id', adminController.messageReply);
 //admin settings routes
 router.get('/settings', adminController.settings);
 router.post('/settings/update/:id', adminController.updateSettings);
-//admin sample messages routes
-router.get('/samples/add', adminController.addMessage);
-router.post('/samples/add', adminController.addMessageProcess);
-router.get('/samples/update/:id', adminController.updateMessage);
-router.post('/samples/update/:id', adminController.updateMessageProcess);
-router.get('/samples/delete/:id', adminController.deleteMessage);
 
 //export router
 module.exports = router;
