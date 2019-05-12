@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const User = require('../models/User');
 
-module.exports = (passport) =>{
+module.exports = Passport =>{
     passport.use(new Strategy({
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,

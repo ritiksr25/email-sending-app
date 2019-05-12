@@ -9,8 +9,8 @@ router.get('/', indexController.index);
 //aboutus route
 router.get('/about', indexController.about);
 //contact us routes
-router.get('/contact', indexController.contact);
-router.post('/contact', indexController.contactProcess);
+//router.get('/contact', indexController.contact);
+//router.post('/contact', indexController.contactProcess);
 
 //export router
 module.exports = router;

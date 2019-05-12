@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 //Database URL 
-const dburl = processs.env.MONGO_URI;
+const dburl = process.env.MONGO_URI;
 //Map global Promise
 mongoose.Promise = global.Promise;
 //Mongoose connect

@@ -5,13 +5,14 @@ const cors = require('cors');
 const path = require('path');
 const ejs = require('ejs');
 const session = require('express-session');
+const passport = require('passport');
 const flash = require('connect-flash');
 
 const app = express();
 
 require('dotenv').config();
 require('./config/dbconnection');
-require('./config/passport')(passport);
+require('./config/passport').Passport;
 
 
 app.use(cors());
